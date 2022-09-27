@@ -15,13 +15,13 @@ namespace Factory.Behaviour
         public HourlyWage( string? name,  string? sex, in int NormalPay, in int hoursStandard, in int BonusPay)
             : base(name, sex, NormalPay, BonusPay)
         {
-            if ((hoursStandard < 1) || (hoursStandard > 24))
+            //if ((hoursStandard < 1) || (hoursStandard > 24))
                 //throw invalid_argument("Время выходит за суточные рамки 24 часа: " + to_string(m_hoursStandard));
             this.hoursStandard = hoursStandard * 15;
 
         }
-        public int HoursStandard { get => hoursStandard; }
-        public override string WorkerStatus { get => "Hourly"; } 
+        public int HoursStandard => hoursStandard; 
+        public override string WorkerStatus  => "Hourly"; 
         public override int calculateSalary()
         {
             int wage;

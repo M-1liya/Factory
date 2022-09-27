@@ -97,9 +97,9 @@ namespace Factory.Behaviour
         //Вывод результата
         public void print()
         {
-            if (m_workersList == null)
+            if (m_workersList == null || m_workersList.Count == 0)
             {
-                Console.WriteLine("Список пуст");
+                Console.WriteLine("Список пуст\n");
                 return;
             }
 

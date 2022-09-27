@@ -24,21 +24,19 @@ namespace Factory.Behaviour
         }
 
 
-        public string Name { get => name; }
 
-
-
-        public string Sex { get => sex; } 
-        public int NormalPay { get => normalPay; } 
-        public int BonusPay { get => bonusPay; }
-        public int getAccumulatedAfterLastPay { get => accumulatedAfterLastPay; } 
+        public string Name => name; 
+        public string Sex  => sex; 
+        public int NormalPay => normalPay; 
+        public int BonusPay => bonusPay; 
+        public int AccumulatedAfterLastPay => accumulatedAfterLastPay; 
         public void work(in int accumulated)
         {
             if (accumulated < 0) { return; }
             accumulatedAfterLastPay += accumulated;
 
         }
-        public virtual string WorkerStatus { get => ""; }
+        public virtual string WorkerStatus  => ""; 
         public virtual int calculateSalary() => 0;
 
     }
