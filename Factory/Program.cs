@@ -63,6 +63,7 @@ namespace Factory
                 
         }
 
+
         static void positionChoosing(Company c)
         {
             byte newWorkerPost;
