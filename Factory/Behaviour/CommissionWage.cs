@@ -15,11 +15,10 @@ namespace Factory.Behaviour
             : base(m_name, m_sex, m_normalPay, m_bonusPay)
         {
             if ((m_bonusPay <= 0) || (m_bonusPay > 100))
-                //throw invalid_argument("Процент не должен быть меньше 0 или больше 100:" + to_string(bonusPay));
-            bonusPay = m_bonusPay;
+                bonusPay = m_bonusPay;
 
         }
-        public override string WorkerStatus { get => "Commission"; } 
+        public override string WorkerStatus  => "Commission";  
 
         public override int calculateSalary()
         {

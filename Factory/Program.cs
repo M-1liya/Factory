@@ -57,7 +57,7 @@ namespace Factory
                         break;
                     case 5:
                     default:
-                        break;
+                        return;
                 }
             }
                 
@@ -71,7 +71,7 @@ namespace Factory
                 Console.WriteLine("------------------------------");
                 Console.WriteLine("1. Сотрудник с комиссионной оплатой труда");
                 Console.WriteLine("2. Сотрудник с почасовой оплатой труда");
-                Console.WriteLine("------------------------------");
+                Console.WriteLine("------------------------------\n");
                 Console.WriteLine("Введите номер должности сотрудника: ");
 
             }
@@ -98,7 +98,6 @@ namespace Factory
 
             name = Console.ReadLine();
 
-            Console.WriteLine("------------------------------");
             Console.Write("Введите пол сотрудника: ");
             sex = Console.ReadLine();
 
@@ -118,13 +117,13 @@ namespace Factory
             Console.Write("Введите имя сотрудника: ");              // Имя
             name = Console.ReadLine();
 
-            Console.Write("\nВведите пол сотрудника: ");            //Пол
+            Console.Write("Введите пол сотрудника: ");            //Пол
             sex = Console.ReadLine();
 
-            Console.Write("\nВведите оклад сотрудника: ");                          // Оклад
+            Console.Write("Введите оклад сотрудника: ");                          // Оклад
             int.TryParse(Console.ReadLine(), out salary);
 
-            Console.Write("\nВведите процент с продаж для сотрудника: ");           //Процент
+            Console.Write("Введите процент с продаж для сотрудника: ");           //Процент
             int.TryParse(Console.ReadLine(), out percent);
             
             Console.WriteLine("------------------------------");
@@ -140,10 +139,11 @@ namespace Factory
         {
             string? name;
 
-            Console.WriteLine("Введите имя сотрудника, которого хотите удалить:");
+            Console.WriteLine("\nВведите имя сотрудника, которого хотите удалить:");
             do { name = Console.ReadLine(); } while (name == null);
 
             company.removeWorker(name);
+            Console.WriteLine("Сотрудник уволен!\n");
         }
 
         static void companyWork(Company company)
